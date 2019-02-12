@@ -9,8 +9,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score
 from util import (random_split, block_split, train_lr, compute_roc)
 
 DATASETS = ['mnist', 'cifar', 'svhn']
-ATTACKS = ['fgsm', 'bim-a', 'bim-b', 'jsma', 'cw-l2']
-CHARACTERISTICS = ['kd', 'bu', 'lid']
+ATTACKS = ['fgsm', 'bim-a', 'bim-b', 'jsma', 'cw-l2', 'fim']
+CHARACTERISTICS = ['kd', 'bu', 'lid', 'fim']
 PATH_DATA = "data/"
 PATH_IMAGES = "plots/"
 
