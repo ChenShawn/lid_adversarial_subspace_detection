@@ -129,6 +129,7 @@ def get_kd(model, X_train, Y_train, X_test, X_test_noisy, X_test_adv):
 
     return artifacts, labels
 
+
 def get_bu(model, X_test, X_test_noisy, X_test_adv):
     """
     Get Bayesian uncertainty scores
@@ -237,6 +238,18 @@ def get_kmeans(model, X_test, X_test_noisy, X_test_adv, k=10, batch_size=100, da
     artifacts, labels = merge_and_generate_labels(kms_pos, kms_neg)
 
     return artifacts, labels
+
+
+def get_fim_eigens_once(model, input_xs, num_eigs=20, log_scale=True):
+    """get_fim_eigens_once
+    :param model:
+    :param input_xs: type np.array
+    :param num_eigs: the number of eigenvalues to be extracted
+    :log_scale: use logarithm of eigenvalues for better scale and distinguishability
+    """
+    pass
+
+
 
 def main(args):
     assert args.dataset in ['mnist', 'cifar', 'svhn'], \

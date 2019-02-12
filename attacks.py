@@ -282,3 +282,10 @@ def saliency_map_method(sess, model, X, Y, theta, gamma, clip_min=None,
 
     return X_adv
 
+
+def ossa(sess, model, input_xs, input_ys, method='vanilla', use_sampling=False):
+    """ossa
+    :param method: either `vanilla` or `power_iter`, the latter enable multiple images as input
+    :param use_sampling: set to True to enable Monte-Carlo sampling
+    """
+    pass
