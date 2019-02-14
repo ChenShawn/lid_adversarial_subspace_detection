@@ -254,7 +254,7 @@ def get_fim_eigens_once(model, input_xs, num_eigs=20, log_scale=True):
 def main(args):
     assert args.dataset in ['mnist', 'cifar', 'svhn'], \
         "Dataset parameter must be either 'mnist', 'cifar' or 'svhn'"
-    assert args.attack in ['fgsm', 'bim-a', 'bim-b', 'jsma', 'cw-l2', 'all'], \
+    assert args.attack in ['fgsm', 'bim-a', 'bim-b', 'jsma', 'cw-l2', 'all', 'fim'], \
         "Attack parameter must be either 'fgsm', 'bim-a', 'bim-b', " \
         "'jsma' or 'cw-l2'"
     assert args.characteristic in ['kd', 'bu', 'lid', 'km', 'all'], \

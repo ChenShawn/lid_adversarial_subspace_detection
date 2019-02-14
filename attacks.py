@@ -289,3 +289,7 @@ def ossa(sess, model, input_xs, input_ys, method='vanilla', use_sampling=False):
     :param use_sampling: set to True to enable Monte-Carlo sampling
     """
     pass
+
+
+def et_multi_step_fim_attack(sess, model, input_xs, input_ys, method='vanilla', use_sampling=False):
+    pass

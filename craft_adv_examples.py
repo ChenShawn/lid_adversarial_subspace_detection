@@ -99,7 +99,7 @@ def craft_one_type(sess, model, X, Y, dataset, attack, batch_size):
 def main(args):
     assert args.dataset in ['mnist', 'cifar', 'svhn'], \
         "Dataset parameter must be either 'mnist', 'cifar' or 'svhn'"
-    assert args.attack in ['fgsm', 'bim-a', 'bim-b', 'jsma', 'cw-l2', 'all', 'cw-lid'], \
+    assert args.attack in ['fgsm', 'bim-a', 'bim-b', 'jsma', 'cw-l2', 'all', 'cw-lid', 'fim'], \
         "Attack parameter must be either 'fgsm', 'bim-a', 'bim-b', " \
         "'jsma', 'cw-l2', 'all' or 'cw-lid' for attacking LID detector"
     model_file = os.path.join(PATH_DATA, "model_%s.h5" % args.dataset)

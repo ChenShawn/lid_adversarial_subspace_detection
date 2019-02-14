@@ -749,6 +749,7 @@ def compute_roc_rfeinman(probs_neg, probs_pos, plot=False):
 
     return fpr, tpr, auc_score
 
+
 def random_split(X, Y):
     """
     Random split the data into 80% for training and 20% for testing
@@ -766,6 +767,7 @@ def random_split(X, Y):
     Y_train, Y_test = Y[:num_train], Y[num_train:]
 
     return X_train, Y_train, X_test, Y_test
+
 
 def block_split(X, Y):
     """
@@ -790,6 +792,8 @@ def block_split(X, Y):
     Y_test = np.concatenate((Y_norm[num_train:], Y_noisy[num_train:], Y_adv[num_train:]))
 
     return X_train, Y_train, X_test, Y_test
+
+
 
 if __name__ == "__main__":
     # unit test
